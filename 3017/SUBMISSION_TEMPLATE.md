@@ -15,13 +15,13 @@ If AI was used for this learning-log-required problem, also complete `ai_reflect
 OJ problem number/title:
 
 ```text
-2996
+3017
 ```
 
 OJ submission ID, if submitted:
 
 ```text
-542094
+542190
 ```
 
 OJ status:
@@ -33,13 +33,22 @@ Pass
 Independent time spent on this problem:
 
 ```text
-
+0-15 minutes
 ```
 
 Choose one:
 
 ```text
 0-15 minutes
+15-30 minutes
+30-60 minutes
+1-3 hours
+3-6 hours
+6-24 hours
+1-3 days
+4-7 days
+1-4 weeks
+More than 4 weeks
 ```
 
 How to count this time:
@@ -64,7 +73,7 @@ Also explain the input, output, and important constraints.
 If you do not fully understand the problem yet, write what you currently understand. Your understanding may be incomplete or incorrect, but you must make a genuine attempt.
 
 ```text
-We will first input a given name, then input a surname. The program will display the full name (first name and last name) on the first line. On the second line, it will display the combination of the first two characters of the first name and the first two characters of the surname.
+The program takes the original price before the service charge and VAT. Then, it calculates the service charge and VAT. The service charge is 10% of the original price, with a minimum of 50 baht and a maximum of 1,000 baht. For example, if the original price is 100 baht, the service charge is not 10 baht but 50 baht because of the minimum charge. After that, the program adds 7% VAT and calculates the final total price.
 ```
 
 ---
@@ -84,10 +93,10 @@ This can be rough. It may be incomplete or different from your final solution.
 You may write pseudocode, a flowchart idea, or step-by-step thinking.
 
 ```text
-Step 1: First, I look at what the problem is asking for.
-Step 2: I see that it needs two inputs, so I write the program to take two values.
-Step 3: Then I combine the first name and last name in the program.
-Step 4: After that, I display the first two letters of both the first and last name using [:2], and I use sep="" so there are no spaces between them.
+Step 1: First, I write the program to receive the original price.
+Step 2: Then, I calculate the service charge as 10% of the original price.
+Step 3: Next, I use if conditions to make sure the service charge is at least 50 baht and no more than 1,000 baht.
+Step 4: Finally, I add the original price and the service charge together, multiply the result by 1.07 to include VAT, and get the final total price.
 ```
 
 ---
@@ -107,7 +116,7 @@ Do not copy AI's explanation.
 Do not copy another person's explanation.
 
 ```text
-It is the same as the initial plan because I tested it with the test cases, and it matches the expected results. This includes both the iJudge test cases and my own test cases.
+The result matches the initial plan because the service charge was clearly defined, there was no confusion with the VAT calculation, and the formula was applied correctly.
 ```
 
 ---
@@ -127,28 +136,25 @@ If the input or output has many lines, write them inside the text blocks.
 Why I chose this case:
 
 ```text
-It is my real name.
+It uses a normal price where the service charge falls within the range of 50 to 1,000 baht. This is to check the basic correctness of the code’s logic.
 ```
 
 Input:
 
 ```text
-Saringkan
-Dangsuwan
+345
 ```
 
 Expected output:
 
 ```text
-Saringkan Dangsuwan
-SaDa
+422.65
 ```
 
 Actual output:
 
 ```text
-Saringkan Dangsuwan
-SaDa
+422.65
 ```
 
 Result:
@@ -162,28 +168,25 @@ Pass
 Why I chose this case:
 
 ```text
-Because he is very famous right now.
+It is a low price used to test the minimum service charge condition.
 ```
 
 Input:
 
 ```text
-Lionel
-Messi
+20
 ```
 
 Expected output:
 
 ```text
-Lionel Messi
-LiMe
+74.90
 ```
 
 Actual output:
 
 ```text
-Lionel Messi
-LiMe
+74.90
 ```
 
 Result:
@@ -197,28 +200,25 @@ Pass
 Why I chose this case:
 
 ```text
-A name suddenly popped into my head.
+It is a high price used to test the maximum service charge condition.
 ```
 
 Input:
 
 ```text
-Monkey D.
-Luffy
+676767
 ```
 
 Expected output:
 
 ```text
-Hello Monkey D. Luffy
-MoLu
+725210.69
 ```
 
 Actual output:
 
 ```text
-Hello Monkey D. Luffy
-MoLu
+725210.69
 ```
 
 Result:
@@ -308,7 +308,7 @@ Write `Yes` for each statement.
 |---|---|
 | I wrote this submission in my own words. | Yes|
 | I understand my final code. | Yes|
-| I recorded the real OJ status. | |
+| I recorded the real OJ status. | Yes|
 | I did not copy AI-generated text directly into this file. | Yes|
 | I did not copy code from another person. | Yes|
 | If I received human help, I disclosed it in this file. | Yes|

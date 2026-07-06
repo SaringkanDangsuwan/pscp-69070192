@@ -15,13 +15,13 @@ If AI was used for this learning-log-required problem, also complete `ai_reflect
 OJ problem number/title:
 
 ```text
-2996
+3011
 ```
 
 OJ submission ID, if submitted:
 
 ```text
-542094
+542195
 ```
 
 OJ status:
@@ -33,13 +33,22 @@ Pass
 Independent time spent on this problem:
 
 ```text
-
+15-30 minutes
 ```
 
 Choose one:
 
 ```text
 0-15 minutes
+15-30 minutes
+30-60 minutes
+1-3 hours
+3-6 hours
+6-24 hours
+1-3 days
+4-7 days
+1-4 weeks
+More than 4 weeks
 ```
 
 How to count this time:
@@ -64,7 +73,7 @@ Also explain the input, output, and important constraints.
 If you do not fully understand the problem yet, write what you currently understand. Your understanding may be incomplete or incorrect, but you must make a genuine attempt.
 
 ```text
-We will first input a given name, then input a surname. The program will display the full name (first name and last name) on the first line. On the second line, it will display the combination of the first two characters of the first name and the first two characters of the surname.
+There are three primary colors: red, yellow, and blue. By mixing these primary colors, we can get three secondary colors: orange from red and yellow, violet from red and blue, and green from yellow and blue.
 ```
 
 ---
@@ -84,10 +93,9 @@ This can be rough. It may be incomplete or different from your final solution.
 You may write pseudocode, a flowchart idea, or step-by-step thinking.
 
 ```text
-Step 1: First, I look at what the problem is asking for.
-Step 2: I see that it needs two inputs, so I write the program to take two values.
-Step 3: Then I combine the first name and last name in the program.
-Step 4: After that, I display the first two letters of both the first and last name using [:2], and I use sep="" so there are no spaces between them.
+Step 1: First, I receive two color inputs.
+Step 2: Then, I write if conditions to check which two colors are mixed and display the correct result.
+Step 3: Finally, I use an else statement to display "Error" if the input colors are not valid primary colors or cannot be mixed.
 ```
 
 ---
@@ -107,7 +115,9 @@ Do not copy AI's explanation.
 Do not copy another person's explanation.
 
 ```text
-It is the same as the initial plan because I tested it with the test cases, and it matches the expected results. This includes both the iJudge test cases and my own test cases.
+**Spoken English (suitable for a PSCP assignment):**
+
+It was similar to my first plan, but I had to modify it. In the first version, if both input colors were the same primary color, the program displayed Error. To fix this, I added another condition. If the first color is the same as the second color and the color is red, yellow, or blue, the program displays that same color instead of Error.
 ```
 
 ---
@@ -127,28 +137,26 @@ If the input or output has many lines, write them inside the text blocks.
 Why I chose this case:
 
 ```text
-It is my real name.
+To check whether the conditions in the code work correctly.
 ```
 
 Input:
 
 ```text
-Saringkan
-Dangsuwan
+Blue 
+Red
 ```
 
 Expected output:
 
 ```text
-Saringkan Dangsuwan
-SaDa
+Violet
 ```
 
 Actual output:
 
 ```text
-Saringkan Dangsuwan
-SaDa
+Violet
 ```
 
 Result:
@@ -162,28 +170,26 @@ Pass
 Why I chose this case:
 
 ```text
-Because he is very famous right now.
+To check whether the program displays Error when both input colors are the same but are not primary colors.
 ```
 
 Input:
 
 ```text
-Lionel
-Messi
+Violet
+Violet
 ```
 
 Expected output:
 
 ```text
-Lionel Messi
-LiMe
+Error
 ```
 
 Actual output:
 
 ```text
-Lionel Messi
-LiMe
+Error
 ```
 
 Result:
@@ -197,28 +203,26 @@ Pass
 Why I chose this case:
 
 ```text
-A name suddenly popped into my head.
+To check whether the program displays the color when both input colors are the same primary color.
 ```
 
 Input:
 
 ```text
-Monkey D.
-Luffy
+Red
+Red
 ```
 
 Expected output:
 
 ```text
-Hello Monkey D. Luffy
-MoLu
+Red
 ```
 
 Actual output:
 
 ```text
-Hello Monkey D. Luffy
-MoLu
+Red
 ```
 
 Result:
@@ -308,7 +312,7 @@ Write `Yes` for each statement.
 |---|---|
 | I wrote this submission in my own words. | Yes|
 | I understand my final code. | Yes|
-| I recorded the real OJ status. | |
+| I recorded the real OJ status. | Yes|
 | I did not copy AI-generated text directly into this file. | Yes|
 | I did not copy code from another person. | Yes|
 | If I received human help, I disclosed it in this file. | Yes|
